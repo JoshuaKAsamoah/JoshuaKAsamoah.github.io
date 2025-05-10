@@ -177,10 +177,10 @@
               <h3>{{post.title}}</h3>
               <br>
               <em>{{post.authors}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
+              <h3>
+              {{post.type}}
 
-              <br>
+              <h3>
               {% if post.website %}
               <a href="{{post.website}}">website</a> /
               {% endif %}
