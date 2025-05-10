@@ -7,7 +7,7 @@ authors: Blessing Agyei Kyem, Joshua Kofi Asamoah, Armstrong Aboah
 venue: North Dakota State University
 excerpt: "This study proposes Context-CrackNet, a novel encoder-decoder architecture featuring the Region-Focused Enhancement Module (RFEM) and Context-Aware Global Module (CAGM). These innovations enhance the model's ability to capture fine-grained local details and global contextual dependencies, respectively."
 image: /images/Context.png
-arxiv: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5127319
+arxiv: https://arxiv.org/pdf/2501.14413
 # paper: /pdfs/ICBDA_2025_paper.pdf
 # code: https://github.com/JoshuaKAsamoah/retroreflectivity-estimation
 ---
