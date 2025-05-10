@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Saam-Reflectnet: Sign-Aware Attention-Based Multitasking Framework for Integrated Traffic Sign Detection and Retroreflectivity Estimation"
-authors: Joshua K. Asamoah, Blessing Agyei Kyem. Armstrong Aboah
-venue: North Dakota State University
 date: 2025-05-10
 categories: Research
+authors: Joshua K. Asamoah, Blessing Agyei Kyem. Armstrong Aboah
+venue: North Dakota State University
 excerpt: "We propose a method to estimate traffic sign reflectivity using deep learning and LiDAR data, enabling scalable infrastructure monitoring."
 image: /images/saam.png
 arxiv: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5127319
