@@ -3,9 +3,9 @@ layout: post
 title: "Context-CrackNet: A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement images"
 date: 2025-05-10
 categories: Research
-authors: Blessing Agyei Kyem, Joshua Kofi Asamoah, Armstrong Aboah
+authors: Blessing Agyei Kyem,,Joshua Kofi Asamoah, Armstrong Aboah
 venue: North Dakota State University
-type: IEEE Access, 2024.
+type: Construction and Building Materials, (Not Online Yet) 2025s.
 excerpt: "This study proposes Context-CrackNet, a novel encoder-decoder architecture featuring the Region-Focused Enhancement Module (RFEM) and Context-Aware Global Module (CAGM). These innovations enhance the model's ability to capture fine-grained local details and global contextual dependencies, respectively."
 image: /images/Context.png
 arxiv: https://arxiv.org/pdf/2501.14413
