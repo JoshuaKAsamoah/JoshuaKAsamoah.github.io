@@ -9,6 +9,7 @@ type: Expert Systems with Applications (Not Online Yet), 2025
 excerpt: "We developed SAAM-ReflectNet, a deep learning framework that unifies traffic sign detection, classification, and retroreflectivity estimation into a single automated pipeline."
 image: /images/saam.png
 arxiv: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5127319
+paper : https://doi.org/10.1016/j.eswa.2025.128003
 # paper: /pdfs/ICBDA_2025_paper.pdf
 # code: https://github.com/JoshuaKAsamoah/retroreflectivity-estimation
 ---
