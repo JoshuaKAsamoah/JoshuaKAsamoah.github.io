@@ -228,10 +228,14 @@
           {% for cat in post.categories %}
           {% if cat == 'Research' %}
           <tr>
+            {% if post.image %}
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
+            {% else %}
+            <td style="padding:2.5%;width:100%;vertical-align:middle" colspan="2">
+            {% endif %}
               <h3>{{post.title}}</h3>
               <br>
               <strong>{{post.authors}} {{post.course}}</strong>
@@ -244,6 +248,9 @@
               {% endif %}
               {% if post.paper %}
               <a href="{{post.paper}}">paper</a> /
+              {% endif %}
+              {% if post.pdf %}
+              <a href="{{post.pdf}}">pdf</a> /
               {% endif %}
               {% if post.patent %}
               <a href="{{post.patent}}">patent</a> /
@@ -269,8 +276,14 @@
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
               {% endif %}
+              {% if post.post %}
+              <a href="{{post.post}}">post</a> /
+              {% endif %}
               {% if post.arxiv %}
               <a href="{{post.arxiv}}">arxiv</a> /
+              {% endif %}
+              {% if post.bibtex %}
+              <a href="{{post.bibtex}}">bibtex</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
