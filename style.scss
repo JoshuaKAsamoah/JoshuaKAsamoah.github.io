@@ -10,68 +10,105 @@
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
+/* THEME      */
+/**************/
+$theme-bg: #f5f3f0;
+$theme-paper: #fdfcfa;
+$theme-text: #2d2a26;
+$theme-text-muted: #5c5752;
+$theme-accent: #0d9488;
+$theme-accent-hover: #0f766e;
+$theme-border: #e8e4df;
+$theme-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+/**************/
 /* BASE RULES */
 /**************/
+body {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  font-display: auto;
+  color: $theme-text;
+  background: $theme-bg;
+  line-height: 1.6;
+  margin: 0;
+  padding: 24px 0;
+}
+
+body > table {
+  background: $theme-paper;
+  border-radius: 8px;
+  box-shadow: $theme-shadow;
+  border: 1px solid $theme-border;
+}
+
 a {
-  color: #0d9488;
+  color: $theme-accent;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #0f766e;
+  color: $theme-accent-hover;
   text-decoration: underline;
 }
 
-body,
 td,
 th,
 tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-display: auto;
+  color: $theme-text;
 }
 
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: inherit;
   font-display: auto;
+  color: $theme-text;
 }
 
 h2 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-display: auto;
-  font-weight: normal;
+  font-weight: 700;
+  color: $theme-text;
   padding: 0px;
-  margin: 0px;
-  display:inline; 
+  margin: 0px 0 8px 0;
+  display: inline;
+  letter-spacing: 0.01em;
+  border-bottom: 2px solid $theme-accent;
+  padding-bottom: 4px;
 }
 
 h3 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   font-display: auto;
+  color: $theme-text;
   padding: 0px;
   margin: 0px;
-  display:inline; 
+  display: inline;
 }
 
 h1 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-  font-weight: normal;
+  font-size: 28px;
+  font-weight: 700;
   font-display: auto;
-  text-align: center;
+  text-align: left;
+  color: $theme-text;
   padding: 0px;
-  margin-block-start: 14px;
-  margin-block-end: 14px;
+  margin-block-start: 0;
+  margin-block-end: 12px;
   margin-left: 0px;
   margin-right: 0px;
-
+  letter-spacing: -0.02em;
 }
 
 .one {
@@ -96,7 +133,12 @@ h1 {
 }
 
 span.highlight {
-  background-color: #ffffd0;
+  background-color: #fef9e7;
+}
+
+/* Theme: section spacing */
+body td {
+  padding: 2.5%;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
