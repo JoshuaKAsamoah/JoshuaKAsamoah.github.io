@@ -22,8 +22,9 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <style>
-    .news-date { color: #6f42c1; font-weight: 600; }
-    #news-more-summary { color: #6f42c1; text-decoration: underline; }
+    .news-date { color: #0d9488; font-weight: 600; letter-spacing: 0.02em; }
+    .news-toggle { color: #1772d0; font-size: 14px; cursor: pointer; text-decoration: none; }
+    .news-toggle:hover { color: #f09228; text-decoration: underline; }
   </style>
 
 </head>
@@ -78,8 +79,8 @@
                 <p>
                   <span class="news-date">[09/30/2025]</span>      Our research paper titled <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted for presentation at the TRB 2026 Conference.
                 </p>
-                <details id="news-more">
-                <summary id="news-more-summary" style="cursor:pointer;">Read more</summary>
+                <p id="news-read-more-wrap"><a href="#" class="news-toggle" id="news-read-more">Read more</a></p>
+                <div id="news-more" style="display:none;">
                 <p>
                   <span class="news-date">[09/29/2025]</span>      Our research paper titled <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted to the NeurIPS 2025 Workshop on UrbanAI.
                 </p>
@@ -125,13 +126,17 @@
                 <p>
                   <span class="news-date">[06/10/2024]</span>      Excited to join the <a href="https://www.ndsu-smartlab.com/">SMART</a>Lab.
                 </p>
-                </details>
+                <p><a href="#" class="news-toggle" id="news-show-less">Show less</a></p>
+                </div>
               <script>
                 (function() {
-                  var el = document.getElementById('news-more');
-                  var sum = document.getElementById('news-more-summary');
-                  if (el && sum) {
-                    el.addEventListener('toggle', function() { sum.textContent = this.open ? 'Show less' : 'Read more'; });
+                  var more = document.getElementById('news-more');
+                  var readMore = document.getElementById('news-read-more');
+                  var showLess = document.getElementById('news-show-less');
+                  var readMoreWrap = document.getElementById('news-read-more-wrap');
+                  if (more && readMore && showLess) {
+                    readMore.addEventListener('click', function(e) { e.preventDefault(); more.style.display = 'block'; readMoreWrap.style.display = 'none'; });
+                    showLess.addEventListener('click', function(e) { e.preventDefault(); more.style.display = 'none'; readMoreWrap.style.display = 'block'; });
                   }
                 })();
               </script>
