@@ -35,22 +35,19 @@
     .nav-tab.active::after { content: ''; position: absolute; bottom: 0; left: 10%; width: 80%; height: 2px; background: #0d9488; }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
-    /* Footer */
-    .site-footer { background: #1e3a5f; color: #b8d4e8; padding: 32px 2.5% 24px; margin-top: 24px; }
+    /* Footer - white background */
+    .site-footer { background: #fff; color: #222; padding: 32px 2.5% 24px; margin-top: 24px; border-top: 1px solid #e5e7eb; }
     .footer-inner { max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; }
     .footer-col { flex: 1; min-width: 160px; }
-    .footer-title { font-weight: 700; color: #fff; margin-bottom: 8px; font-size: 16px; }
-    .footer-desc { font-size: 14px; line-height: 1.5; margin: 0 0 12px 0; color: #b8d4e8; }
-    .footer-social { display: flex; gap: 12px; flex-wrap: wrap; }
-    .footer-social a { color: #7eb8e0; text-decoration: none; font-size: 14px; }
-    .footer-social a:hover { text-decoration: underline; color: #a8d4f0; }
-    .footer-heading { font-weight: 700; color: #f0c674; font-size: 13px; letter-spacing: 0.05em; margin-bottom: 10px; }
-    .footer-link { display: block; color: #7eb8e0; text-decoration: none; font-size: 14px; margin-bottom: 6px; }
-    .footer-link:hover { color: #a8d4f0; text-decoration: underline; }
-    .footer-contact { font-size: 14px; margin: 0 0 8px 0; color: #b8d4e8; }
-    .footer-icon { color: #f0c674; margin-right: 6px; }
-    .site-footer .site-credit { text-align: center; margin: 20px 0 0 0; font-size: 12px; color: #8ba3b8; }
-    .site-footer .site-credit a { color: #7eb8e0; }
+    .footer-heading { font-weight: 700; color: #222; font-size: 13px; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .footer-link { display: block; color: #0d9488; text-decoration: none; font-size: 14px; margin-bottom: 6px; }
+    .footer-link:hover { color: #0f766e; text-decoration: underline; }
+    .footer-contact { font-size: 14px; margin: 0 0 8px 0; color: #222; }
+    .footer-contact a { color: #0d9488; text-decoration: none; }
+    .footer-contact a:hover { text-decoration: underline; color: #0f766e; }
+    .footer-icon { color: #555; margin-right: 6px; }
+    .site-footer .site-credit { text-align: center; margin: 20px 0 0 0; font-size: 12px; color: #6b7280; }
+    .site-footer .site-credit a { color: #0d9488; }
   </style>
 
 </head>
@@ -159,7 +156,7 @@
                   <span class="news-date">[07/02/2024]</span>      Congratulations! The SMART Lab was awarded an EDRF grant.
                 </p>
                 <p>
-                  <span class="news-date">[06/10/2024]</span>      Excited to join the <a href="https://www.ndsu-smartlab.com/">SMART</a>Lab.
+                  <span class="news-date">[06/10/2024]</span>      Excited to join the <a href="https://aboaharmstrong.vercel.app/">SMART</a> Lab.
                 </p>
                 <p><a href="#" class="news-toggle" id="news-show-less">Show less</a></p>
                 </div>
@@ -342,7 +339,13 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Activities</h2>
-              
+              <p>Explore our lab's achievements, awards, presentations, and recognitions in transportation research and innovation.</p>
+              <p><strong>2026</strong></p>
+              <ul style="margin:0.5em 0 1em 1.2em;">
+                <li>2026 Transportation Research Board Meeting, Washington DC</li>
+                <li>Joshua's Team (2nd Place) &amp; Eugene's Team (3rd Place) at UAV Hackathon for Weed Detection</li>
+              </ul>
+              <p><a href="https://aboaharmstrong.vercel.app/activities" target="_blank" rel="noopener" style="font-weight:600;">View all activities at the SMART Lab →</a></p>
             </td>
           </tr>
         </table>
@@ -406,27 +409,18 @@
         <footer class="site-footer">
           <div class="footer-inner">
             <div class="footer-col">
-              <div class="footer-title">The SMART Lab</div>
-              <p class="footer-desc">Dedicated to advancing transportation engineering, computer vision, and data science through research, teaching, and collaboration.</p>
-              <div class="footer-social">
-                <a href="https://www.linkedin.com/company/smart-lab-ndsu" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <a href="https://github.com/JoshuaKAsamoah" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-                <a href="https://www.ndsu-smartlab.com/" target="_blank" rel="noopener" aria-label="SMART Lab">Website</a>
-              </div>
-            </div>
-            <div class="footer-col">
               <div class="footer-heading">QUICK LINKS</div>
               <a href="#" class="footer-link" data-tab="research-interests">Research</a>
               <a href="#" class="footer-link" data-tab="publications">Publications</a>
-              <a href="https://www.ndsu-smartlab.com/" target="_blank" rel="noopener" class="footer-link">Team</a>
+              <a href="https://aboaharmstrong.vercel.app/team" target="_blank" rel="noopener" class="footer-link">Team</a>
               <a href="#" class="footer-link" data-tab="news">News</a>
-              <a href="#" class="footer-link" data-tab="activities">Activities</a>
+              <a href="https://aboaharmstrong.vercel.app/activities" target="_blank" rel="noopener" class="footer-link">Activities</a>
             </div>
             <div class="footer-col">
               <div class="footer-heading">GET IN TOUCH</div>
-              <p class="footer-contact"><span class="footer-icon">✉</span> armstrong.aboah@ndsu.edu</p>
-              <p class="footer-contact"><span class="footer-icon">☎</span> (701) 231-7564</p>
-              <p class="footer-contact"><span class="footer-icon">📍</span> CIE 201K, 1410 North 14th Avenue, Fargo, ND 58102</p>
+              <p class="footer-contact"><span class="footer-icon">✉</span> <a href="mailto:joshua.asamoah@ndsu.edu">joshua.asamoah@ndsu.edu</a></p>
+              <p class="footer-contact"><span class="footer-icon">☎</span> (701) 415-6426</p>
+              <p class="footer-contact"><span class="footer-icon">📍</span> <a href="https://www.google.com/maps/search/3315+Broadway+North+Fargo+ND" target="_blank" rel="noopener">3315 Broadway North, Fargo, ND</a></p>
             </div>
           </div>
           <p class="site-credit">Design and source code from <a href="https://jonbarron.info">Jon Barron's website</a></p>
