@@ -35,6 +35,22 @@
     .nav-tab.active::after { content: ''; position: absolute; bottom: 0; left: 10%; width: 80%; height: 2px; background: #0d9488; }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
+    /* Footer */
+    .site-footer { background: #1e3a5f; color: #b8d4e8; padding: 32px 2.5% 24px; margin-top: 24px; }
+    .footer-inner { max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; }
+    .footer-col { flex: 1; min-width: 160px; }
+    .footer-title { font-weight: 700; color: #fff; margin-bottom: 8px; font-size: 16px; }
+    .footer-desc { font-size: 14px; line-height: 1.5; margin: 0 0 12px 0; color: #b8d4e8; }
+    .footer-social { display: flex; gap: 12px; flex-wrap: wrap; }
+    .footer-social a { color: #7eb8e0; text-decoration: none; font-size: 14px; }
+    .footer-social a:hover { text-decoration: underline; color: #a8d4f0; }
+    .footer-heading { font-weight: 700; color: #f0c674; font-size: 13px; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .footer-link { display: block; color: #7eb8e0; text-decoration: none; font-size: 14px; margin-bottom: 6px; }
+    .footer-link:hover { color: #a8d4f0; text-decoration: underline; }
+    .footer-contact { font-size: 14px; margin: 0 0 8px 0; color: #b8d4e8; }
+    .footer-icon { color: #f0c674; margin-right: 6px; }
+    .site-footer .site-credit { text-align: center; margin: 20px 0 0 0; font-size: 12px; color: #8ba3b8; }
+    .site-footer .site-credit a { color: #7eb8e0; }
   </style>
 
 </head>
@@ -46,7 +62,7 @@
       <a href="#news" class="nav-tab">News</a>
       <a href="#research-interests" class="nav-tab">Research Interests</a>
       <a href="#publications" class="nav-tab">Publications</a>
-      <a href="#course-works" class="nav-tab">Course Works</a>
+      <a href="#activities" class="nav-tab">Activities</a>
     </div>
   </nav>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -56,7 +72,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
             <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
+              <h1 style="text-align:center;">
                 Joshua Kofi Asamoah
               </h1>
               <p>I am a PhD student at <a href="https://www.ndsu.edu/">North Dakota State University</a>, and a part of the <a href="https://aboaharmstrong.vercel.app"> Sustainable Mobility and Advanced Research in Transportation (SMART) </a>Lab research group. Under the mentorship of <a href="https://aboah1994.github.io">Professor Armstrong Aboah</a>, my research is focused on machine learning, deep learning, computer vision, and Internet of Things (IoT), particularly their applications in autonomous navigation and perception..
@@ -173,9 +189,9 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Research Interests</h2>
               <ul style="margin:0.5em 0 0 1.2em; padding-left:0.5em;">
-                <li>Machine learning</li>
-                <li>Computer vision</li>
-                <li>Autonomous systems</li>
+                <li><a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank" rel="noopener">Machine learning</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank" rel="noopener">Computer vision</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Autonomous_system" target="_blank" rel="noopener">Autonomous systems</a></li>
                 <li>Perception and prediction models for transportation safety and smart infrastructure</li>
               </ul>
             </td>
@@ -257,7 +273,12 @@
             {% else %}
             <td style="padding:2.5%;width:100%;vertical-align:middle" colspan="2">
             {% endif %}
-              <h3>{{post.title}}</h3>
+              {% assign paper_url = post.paper | default: post.pdf | default: post.arxiv %}
+              {% if paper_url %}
+              <h3><a href="{{ paper_url }}" target="_blank" rel="noopener">{{ post.title }}</a></h3>
+              {% else %}
+              <h3>{{ post.title }}</h3>
+              {% endif %}
               <br>
               <strong>{{post.authors}} {{post.course}}</strong>
               <br>
@@ -316,11 +337,11 @@
         </table>
         </div>
 
-        <div id="course-works" class="tab-panel">
+        <div id="activities" class="tab-panel">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Course Works</h2>
+              <h2>Activities</h2>
               
             </td>
           </tr>
@@ -382,22 +403,40 @@
         </table>
         </div>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;" class="site-credit">
-                Design and source code from <a href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <div class="footer-col">
+              <div class="footer-title">The SMART Lab</div>
+              <p class="footer-desc">Dedicated to advancing transportation engineering, computer vision, and data science through research, teaching, and collaboration.</p>
+              <div class="footer-social">
+                <a href="https://www.linkedin.com/company/smart-lab-ndsu" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/JoshuaKAsamoah" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+                <a href="https://www.ndsu-smartlab.com/" target="_blank" rel="noopener" aria-label="SMART Lab">Website</a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <div class="footer-heading">QUICK LINKS</div>
+              <a href="#" class="footer-link" data-tab="research-interests">Research</a>
+              <a href="#" class="footer-link" data-tab="publications">Publications</a>
+              <a href="https://www.ndsu-smartlab.com/" target="_blank" rel="noopener" class="footer-link">Team</a>
+              <a href="#" class="footer-link" data-tab="news">News</a>
+              <a href="#" class="footer-link" data-tab="activities">Activities</a>
+            </div>
+            <div class="footer-col">
+              <div class="footer-heading">GET IN TOUCH</div>
+              <p class="footer-contact"><span class="footer-icon">✉</span> armstrong.aboah@ndsu.edu</p>
+              <p class="footer-contact"><span class="footer-icon">☎</span> (701) 231-7564</p>
+              <p class="footer-contact"><span class="footer-icon">📍</span> CIE 201K, 1410 North 14th Avenue, Fargo, ND 58102</p>
+            </div>
+          </div>
+          <p class="site-credit">Design and source code from <a href="https://jonbarron.info">Jon Barron's website</a></p>
+        </footer>
       </td>
     </tr>
   </table>
   <script>
     (function() {
-      var sectionIds = ['home', 'news', 'research-interests', 'publications', 'course-works'];
+      var sectionIds = ['home', 'news', 'research-interests', 'publications', 'activities'];
       var tabs = {};
       var panels = {};
       sectionIds.forEach(function(id) {
@@ -420,6 +459,12 @@
             showPanel(id);
           });
         }
+      });
+      document.querySelectorAll('.footer-link[data-tab]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var id = link.getAttribute('data-tab');
+          if (id && panels[id]) { e.preventDefault(); showPanel(id); }
+        });
       });
     })();
   </script>
