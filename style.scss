@@ -6,17 +6,17 @@
 //
 
 /**************/
-/* THEME: DARK MINIMAL */
+/* THEME: LIGHT / WHITE */
 /**************/
-$bg: #0f1216;
-$surface: #161b22;
-$surface-hover: #1c2128;
-$text: #e6edf3;
-$text-muted: #8b949e;
-$accent: #34d399;
-$accent-hover: #6ee7b7;
-$border: #30363d;
-$glow: 0 8px 24px rgba(0, 0, 0, 0.4);
+$bg: #ffffff;
+$surface: #ffffff;
+$surface-hover: #f8f9fa;
+$text: #222;
+$text-muted: #555;
+$accent: #0d9488;
+$accent-hover: #0f766e;
+$border: #e5e7eb;
+$glow: 0 1px 3px rgba(0, 0, 0, 0.08);
 
 /**************/
 /* BASE RULES */
@@ -129,7 +129,7 @@ h1 {
 }
 
 span.highlight {
-  background-color: rgba(52, 211, 153, 0.15);
+  background-color: rgba(13, 148, 136, 0.12);
   color: $text;
 }
 
