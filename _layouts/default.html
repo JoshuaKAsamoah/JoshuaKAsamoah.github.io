@@ -48,6 +48,20 @@
     .footer-icon { color: #555; margin-right: 6px; }
     .site-footer .site-credit { text-align: center; margin: 20px 0 0 0; font-size: 12px; color: #6b7280; }
     .site-footer .site-credit a { color: #0d9488; }
+    /* Course Works - semester cards */
+    .semester-heading { font-size: 18px; font-weight: 700; color: #222; margin: 24px 0 12px 0; padding-bottom: 4px; border-left: 3px solid #0d9488; padding-left: 12px; }
+    .semester-heading:first-child { margin-top: 0; }
+    .course-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
+    .course-card { flex: 1 1 280px; max-width: 100%; min-width: 260px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .course-card-image { height: 100px; background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); display: flex; align-items: center; justify-content: center; color: #555; font-size: 12px; }
+    .course-card-body { padding: 12px 14px; }
+    .course-card-id { font-size: 11px; color: #6b7280; margin-bottom: 4px; }
+    .course-card-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+    .course-card-title a { color: #222; text-decoration: none; }
+    .course-card-title a:hover { color: #0d9488; text-decoration: underline; }
+    .course-card-status { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+    .course-card-status.open { color: #0d9488; font-weight: 600; }
+    .course-card-instructor { font-size: 13px; color: #555; }
   </style>
 
 </head>
@@ -60,6 +74,7 @@
       <a href="#research-interests" class="nav-tab">Research Interests</a>
       <a href="#publications" class="nav-tab">Publications</a>
       <a href="#activities" class="nav-tab">Activities</a>
+      <a href="#course-works" class="nav-tab">Course Works</a>
     </div>
   </nav>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -406,6 +421,105 @@
         </table>
         </div>
 
+        <div id="course-works" class="tab-panel">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Course Works</h2>
+              <p>Courses organized by semester.</p>
+
+              <div class="semester-heading">Spring 2026</div>
+              <div class="course-grid">
+                <div class="course-card">
+                  <div class="course-card-image">CE 696</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2630-CE696-31986</div>
+                    <div class="course-card-title">CE 696: Special Topics - 31986 - Sp26</div>
+                    <div class="course-card-status open">Open</div>
+                    <div class="course-card-instructor">Armstrong Aboah</div>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-card-image">CE 782</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2630-CE782-36606</div>
+                    <div class="course-card-title">CE 782: Introduction to Intelligent Infrastructure - 36606 - Sp26</div>
+                    <div class="course-card-status open">Open</div>
+                    <div class="course-card-instructor">Ying Huang</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="semester-heading">Fall 2025</div>
+              <div class="course-grid">
+                <div class="course-card">
+                  <div class="course-card-image">CE 646</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2610-CE646-23890</div>
+                    <div class="course-card-title">CE 646: Basic Dynamics of Structures - 23890 - F25</div>
+                    <div class="course-card-status">Closed</div>
+                    <div class="course-card-instructor">Mijia Yang</div>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-card-image">CE 654</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2610-CE654-24288</div>
+                    <div class="course-card-title">CE 654: Geometric Highway Design - 24288 - F25</div>
+                    <div class="course-card-status">Closed</div>
+                    <div class="course-card-instructor">Armstrong Aboah</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="semester-heading">Spring 2025</div>
+              <div class="course-grid">
+                <div class="course-card">
+                  <div class="course-card-image">CE 619</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2530-CE619-33546</div>
+                    <div class="course-card-title">CE 619: Pavement Design - 33546 - Sp25</div>
+                    <div class="course-card-status">Closed</div>
+                    <div class="course-card-instructor">Multiple Instructors</div>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-card-image">CE 652</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2530-CE652</div>
+                    <div class="course-card-title">CE 652: Fundamentals of Oil &amp; Gas Pipeline: Design, Operation, Inspection - Sp25</div>
+                    <div class="course-card-status">Closed</div>
+                    <div class="course-card-instructor">Ying Huang</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="semester-heading">Fall 2024</div>
+              <div class="course-grid">
+                <div class="course-card">
+                  <div class="course-card-image">CSCI 620</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2510-CSCI620-25668</div>
+                    <div class="course-card-title">CSCI 620: Introduction to Data Science in Python - 25668 - F24</div>
+                    <div class="course-card-status">Closed</div>
+                    <div class="course-card-instructor">Changhui Yan</div>
+                  </div>
+                </div>
+                <div class="course-card">
+                  <div class="course-card-image">ECE 677</div>
+                  <div class="course-card-body">
+                    <div class="course-card-id">NDSU1-2510-ECE677-25882</div>
+                    <div class="course-card-title">ECE 677: Hardware Design for Machine Learning - 25882 - F24</div>
+                    <div class="course-card-status">Closed</div>
+                    <div class="course-card-instructor">Umamaheswara Rao Tida</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        </div>
+
         <footer class="site-footer">
           <div class="footer-inner">
             <div class="footer-col">
@@ -415,6 +529,7 @@
               <a href="https://aboaharmstrong.vercel.app/team" target="_blank" rel="noopener" class="footer-link">Team</a>
               <a href="#" class="footer-link" data-tab="news">News</a>
               <a href="https://aboaharmstrong.vercel.app/activities" target="_blank" rel="noopener" class="footer-link">Activities</a>
+              <a href="#" class="footer-link" data-tab="course-works">Course Works</a>
             </div>
             <div class="footer-col">
               <div class="footer-heading">GET IN TOUCH</div>
@@ -430,7 +545,7 @@
   </table>
   <script>
     (function() {
-      var sectionIds = ['home', 'news', 'research-interests', 'publications', 'activities'];
+      var sectionIds = ['home', 'news', 'research-interests', 'publications', 'activities', 'course-works'];
       var tabs = {};
       var panels = {};
       sectionIds.forEach(function(id) {
