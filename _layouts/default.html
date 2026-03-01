@@ -26,15 +26,32 @@
     .news-toggle { color: #34d399; font-size: 14px; cursor: pointer; text-decoration: none; }
     .news-toggle:hover { color: #6ee7b7; text-decoration: underline; }
     .site-credit { color: #6b7280; font-size: 13px; }
+    /* Tab navigation */
+    .site-nav { background: #0f1216; padding: 14px 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #30363d; }
+    .site-nav-inner { max-width: 800px; margin: 0 auto; padding: 0 2.5%; display: flex; gap: 28px; flex-wrap: wrap; justify-content: flex-start; }
+    .nav-tab { color: #8b949e; text-decoration: none; font-size: 14px; padding-bottom: 8px; position: relative; font-family: 'Lato', Verdana, Helvetica, sans-serif; transition: color 0.2s; }
+    .nav-tab:hover { color: #e6edf3; }
+    .nav-tab.active { color: #fff; }
+    .nav-tab.active::after { content: ''; position: absolute; bottom: 0; left: 10%; width: 80%; height: 2px; background: #fff; }
+    html { scroll-behavior: smooth; }
   </style>
 
 </head>
 
 <body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a href="#home" class="nav-tab active">Home</a>
+      <a href="#news" class="nav-tab">News</a>
+      <a href="#research-interests" class="nav-tab">Research Interests</a>
+      <a href="#research-activities" class="nav-tab">Research Activities</a>
+      <a href="#course-works" class="nav-tab">Course Works</a>
+    </div>
+  </nav>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table id="home" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h1>
@@ -57,7 +74,7 @@
           </tr>
         </table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table id="news" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
@@ -145,7 +162,7 @@
           </tr>
         </table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table id="research-interests" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Research Interests</h2>
@@ -207,7 +224,7 @@
         <br>
         <br>
         <br> -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table id="research-activities" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Research Activities</h2>
@@ -291,7 +308,7 @@
         <br>
         <br>
         <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table id="course-works" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Course Works</h2>
@@ -368,6 +385,36 @@
       </td>
     </tr>
   </table>
+  <script>
+    (function() {
+      var sectionIds = ['home', 'news', 'research-interests', 'research-activities', 'course-works'];
+      var tabs = {};
+      sectionIds.forEach(function(id) {
+        var tab = document.querySelector('.nav-tab[href="#' + id + '"]');
+        if (tab) tabs[id] = tab;
+      });
+      function setActive(id) {
+        sectionIds.forEach(function(s) {
+          if (tabs[s]) tabs[s].classList.toggle('active', s === id);
+        });
+      }
+      sectionIds.forEach(function(id) {
+        var tab = tabs[id];
+        if (tab) tab.addEventListener('click', function() { setActive(id); });
+      });
+      function onScroll() {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        var winMid = top + window.innerHeight * 0.35;
+        for (var i = sectionIds.length - 1; i >= 0; i--) {
+          var el = document.getElementById(sectionIds[i]);
+          if (el && el.offsetTop <= winMid) { setActive(sectionIds[i]); return; }
+        }
+        setActive(sectionIds[0]);
+      }
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('load', onScroll);
+    })();
+  </script>
 </body>
 
 </html>
