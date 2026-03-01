@@ -74,22 +74,22 @@
     tr.pub-row td { background: #fefce8 !important; padding: 16px 2.5% !important; border-radius: 8px; }
     tr.pub-row td:first-child { border-radius: 8px 0 0 8px; }
     tr.pub-row td:last-child { border-radius: 0 8px 8px 0; }
-    .pub-row h3 a { color: #1d4ed8; }
-    .pub-row a { color: #1d4ed8; }
-    .pub-row a:hover { color: #0d9488; }
+    .pub-row h3 a { color: #0d9488; }
+    .pub-row a { color: #0d9488; }
+    .pub-row a:hover { color: #0f766e; }
     /* Current Research cards */
     .research-grid { display: flex; flex-wrap: wrap; gap: 20px; }
     .research-card { flex: 1 1 280px; max-width: 100%; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .research-card-image { height: 140px; position: relative; display: flex; align-items: center; justify-content: center; color: #555; font-size: 12px; }
-    .research-card-image .in-progress { position: absolute; top: 10px; left: 10px; background: #22c55e; color: #fff; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; }
+    .research-card-image { height: 140px; position: relative; overflow: hidden; background: #e5e7eb; }
+    .research-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .research-card-image .in-progress { position: absolute; top: 10px; left: 10px; background: #22c55e; color: #fff; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; z-index: 1; }
     .research-card-body { padding: 14px 16px; }
     .research-card-title { font-weight: 700; font-size: 15px; color: #222; margin-bottom: 8px; line-height: 1.3; }
     .research-card-desc { font-size: 14px; color: #555; line-height: 1.5; }
-    .research-card-image.bg-autonomous { background: linear-gradient(135deg, #1e293b 0%, #475569 100%); color: #e2e8f0; }
-    .research-card-image.bg-pavement { background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%); color: #fff; }
-    .research-card-image.bg-traffic { background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); color: #e9d5ff; }
-    .research-card-image.bg-mcmot { background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); color: #fff; }
-    .research-card-image.bg-shepherding { background: linear-gradient(135deg, #15803d 0%, #22c55e 100%); color: #fff; }
+    /* News - colored blocks like publications */
+    #news .news-item { background: #fefce8; padding: 12px 16px; border-radius: 8px; margin-bottom: 10px; }
+    #news .news-item a { color: #0d9488; }
+    #news .news-item a:hover { color: #0f766e; }
   </style>
 
 </head>
@@ -139,71 +139,32 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
-              <p>
-                <p>
-                  <span class="news-date">[02/01/2026]</span>      Our research paper on deep learning and localized data for pavement distress detection in developing regions has been accepted for publication in Advances in Data Science and Adaptive Analysis.
-                </p>
-                <p>
-                  <span class="news-date">[10/31/2025]</span>      Our paper <strong>PaveCap: The First Multimodal Framework for Comprehensive Pavement Condition Assessment with Dense Captioning and PCI Estimation</strong> has been accepted for publication in the ASCE Journal of Transportation Engineering, Part B: Pavements.
-                </p>
-                <p>
-                  <span class="news-date">[10/05/2025]</span>      Our research paper titled <strong>A Memory-Augmented Transformer with Multi-Scale Spatio-Temporal Modelling for Network-Wide Traffic Flow Prediction</strong> has been accepted for presentation at the TRB 2026 Conference.
-                </p>
-                <p>
-                  <span class="news-date">[10/03/2025]</span>      Our research paper titled <strong>Self-Supervised Multi-Scale Transformer with Attention-Guided Fusion For Efficient Crack Detection</strong> has been accepted for publication in Automation in Construction.
-                </p>
-                <p>
-                  <span class="news-date">[09/30/2025]</span>      Our research paper titled <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted for presentation at the TRB 2026 Conference.
-                </p>
+              <div class="news-list">
+                <div class="news-item"><p><span class="news-date">[02/01/2026]</span> Our research paper on deep learning and localized data for pavement distress detection in developing regions has been accepted for publication in Advances in Data Science and Adaptive Analysis.</p></div>
+                <div class="news-item"><p><span class="news-date">[10/31/2025]</span> Our paper <strong>PaveCap: The First Multimodal Framework for Comprehensive Pavement Condition Assessment with Dense Captioning and PCI Estimation</strong> has been accepted for publication in the ASCE Journal of Transportation Engineering, Part B: Pavements.</p></div>
+                <div class="news-item"><p><span class="news-date">[10/05/2025]</span> Our research paper titled <strong>A Memory-Augmented Transformer with Multi-Scale Spatio-Temporal Modelling for Network-Wide Traffic Flow Prediction</strong> has been accepted for presentation at the TRB 2026 Conference.</p></div>
+                <div class="news-item"><p><span class="news-date">[10/03/2025]</span> Our research paper titled <strong>Self-Supervised Multi-Scale Transformer with Attention-Guided Fusion For Efficient Crack Detection</strong> has been accepted for publication in Automation in Construction.</p></div>
+                <div class="news-item"><p><span class="news-date">[09/30/2025]</span> Our research paper titled <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted for presentation at the TRB 2026 Conference.</p></div>
                 <p id="news-read-more-wrap"><a href="#" class="news-toggle" id="news-read-more">Read more</a></p>
                 <div id="news-more" style="display:none;">
-                <p>
-                  <span class="news-date">[09/29/2025]</span>      Our research paper titled <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted to the NeurIPS 2025 Workshop on UrbanAI.
-                </p>
-                <p>
-                  <span class="news-date">[09/28/2025]</span>      Our research paper titled <strong>Self-Supervised Multi-Scale Transformer with Attention-Guided Fusion For Efficient Crack Detection</strong> has been accepted for presentation at the TRB 2026 Conference.
-                </p>
-                <p>
-                  <span class="news-date">[09/28/2025]</span>      Our research paper titled <strong>Context-CrackNet: A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement Images</strong> has been accepted for presentation at the TRB 2026 Conference.
-                </p>
-                <p>
-                  <span class="news-date">[09/20/2025]</span>      Our research paper titled <strong>An Enhanced Lightweight Model for Real-time Pavement Condition Index Prediction</strong> has been accepted for presentation at the TRB 2026 Conference.
-                </p>
-                <p>
-                  <span class="news-date">[07/12/2025]</span>      Three of our research papers have been accepted for presentation at ICCV 2025.
-                </p>
-                <p>
-                  <span class="news-date">[05/02/2025]</span>      Our research paper <strong>Saam-Reflectnet: Sign-Aware Attention-Based Multitasking Framework for Integrated Traffic Sign Detection and Retroreflectivity Estimation</strong> has been accepted for publication at Expert Systems with Applications.
-                </p>
-                <p>
-                  <span class="news-date">[04/29/2025]</span>      Our research paper <strong>A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement Images</strong> has been accepted for publication at Construction and Building Materials.
-                </p>
-                <p>
-                  <span class="news-date">[02/26/2025]</span>      Our paper <strong>A Big Data Approach to Pavement Distress Detection</strong> has been accepted for oral presentation at the International Conference on Big Data Analytics 2025.
-                </p>
-                <p>
-                  <span class="news-date">[02/26/2025]</span>      Our paper <strong>Integrating Travel Behavior Forecasting and Generative Modeling for Predicting Future Urban Mobility and Spatial Transformations</strong> has been accepted for oral presentation at the International Conference on Big Data Analytics 2025.
-                </p>
-                <p>
-                  <span class="news-date">[12/19/2024]</span>      Our paper titled <strong>Weather-Adaptive Synthetic Data Generation for Enhanced Power Line Inspection Using StarGAN</strong> has been accepted for publication at IEEE Access!
-                </p>
-                <p>
-                  <span class="news-date">[09/25/2024]</span>      Our research paper titled <strong>A novel methodological framework for assessing traffic sign retroreflectivity using Lidar data</strong> has been accepted for presentation at the TRB 2025 Conference.
-                </p>
-                <p>
-                  <span class="news-date">[09/21/2024]</span>      Our paper <strong>PaveCap: The First Multimodal Framework for Comprehensive Pavement Condition Assessment with Dense Captioning and PCI Estimation</strong> has been accepted for presentation at the TRB 2025 Annual Conference Meeting.
-                </p>
-                <p>
-                  <span class="news-date">[07/08/2024]</span>      Congratulations! The SMART Lab received a seed grant from AI SUSTEIN.
-                </p>
-                <p>
-                  <span class="news-date">[07/02/2024]</span>      Congratulations! The SMART Lab was awarded an EDRF grant.
-                </p>
-                <p>
-                  <span class="news-date">[06/10/2024]</span>      Excited to join the <a href="https://aboaharmstrong.vercel.app/">SMART</a> Lab.
-                </p>
+                <div class="news-item"><p><span class="news-date">[09/29/2025]</span> Our research paper titled <strong>Demographics-Informed Neural Network for Multi-Modal Spatiotemporal Forecasting of Urban Growth and Travel Patterns Using Satellite Imagery</strong> has been accepted to the NeurIPS 2025 Workshop on UrbanAI.</p></div>
+                <div class="news-item"><p><span class="news-date">[09/28/2025]</span> Our research paper titled <strong>Self-Supervised Multi-Scale Transformer with Attention-Guided Fusion For Efficient Crack Detection</strong> has been accepted for presentation at the TRB 2026 Conference.</p></div>
+                <div class="news-item"><p><span class="news-date">[09/28/2025]</span> Our research paper titled <strong>Context-CrackNet: A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement Images</strong> has been accepted for presentation at the TRB 2026 Conference.</p></div>
+                <div class="news-item"><p><span class="news-date">[09/20/2025]</span> Our research paper titled <strong>An Enhanced Lightweight Model for Real-time Pavement Condition Index Prediction</strong> has been accepted for presentation at the TRB 2026 Conference.</p></div>
+                <div class="news-item"><p><span class="news-date">[07/12/2025]</span> Three of our research papers have been accepted for presentation at ICCV 2025.</p></div>
+                <div class="news-item"><p><span class="news-date">[05/02/2025]</span> Our research paper <strong>Saam-Reflectnet: Sign-Aware Attention-Based Multitasking Framework for Integrated Traffic Sign Detection and Retroreflectivity Estimation</strong> has been accepted for publication at Expert Systems with Applications.</p></div>
+                <div class="news-item"><p><span class="news-date">[04/29/2025]</span> Our research paper <strong>A Context-Aware Framework for Precise Segmentation of Tiny Cracks in Pavement Images</strong> has been accepted for publication at Construction and Building Materials.</p></div>
+                <div class="news-item"><p><span class="news-date">[02/26/2025]</span> Our paper <strong>A Big Data Approach to Pavement Distress Detection</strong> has been accepted for oral presentation at the International Conference on Big Data Analytics 2025.</p></div>
+                <div class="news-item"><p><span class="news-date">[02/26/2025]</span> Our paper <strong>Integrating Travel Behavior Forecasting and Generative Modeling for Predicting Future Urban Mobility and Spatial Transformations</strong> has been accepted for oral presentation at the International Conference on Big Data Analytics 2025.</p></div>
+                <div class="news-item"><p><span class="news-date">[12/19/2024]</span> Our paper titled <strong>Weather-Adaptive Synthetic Data Generation for Enhanced Power Line Inspection Using StarGAN</strong> has been accepted for publication at IEEE Access!</p></div>
+                <div class="news-item"><p><span class="news-date">[09/25/2024]</span> Our research paper titled <strong>A novel methodological framework for assessing traffic sign retroreflectivity using Lidar data</strong> has been accepted for presentation at the TRB 2025 Conference.</p></div>
+                <div class="news-item"><p><span class="news-date">[09/21/2024]</span> Our paper <strong>PaveCap: The First Multimodal Framework for Comprehensive Pavement Condition Assessment with Dense Captioning and PCI Estimation</strong> has been accepted for presentation at the TRB 2025 Annual Conference Meeting.</p></div>
+                <div class="news-item"><p><span class="news-date">[07/08/2024]</span> Congratulations! The SMART Lab received a seed grant from AI SUSTEIN.</p></div>
+                <div class="news-item"><p><span class="news-date">[07/02/2024]</span> Congratulations! The SMART Lab was awarded an EDRF grant.</p></div>
+                <div class="news-item"><p><span class="news-date">[06/10/2024]</span> Excited to join the <a href="https://aboaharmstrong.vercel.app/">SMART</a> Lab.</p></div>
                 <p><a href="#" class="news-toggle" id="news-show-less">Show less</a></p>
                 </div>
+              </div>
               <script>
                 (function() {
                   var more = document.getElementById('news-more');
@@ -216,9 +177,6 @@
                   }
                 })();
               </script>
-              </p>
-                
-              </p>
             </td>
           </tr>
         </table>
@@ -458,38 +416,38 @@
               <p>Active projects advancing transportation technology through computer vision, machine learning, and data science.</p>
               <div class="research-grid">
                 <div class="research-card">
-                  <div class="research-card-image bg-autonomous"><span class="in-progress">In Progress</span>Cooperative Perception</div>
+                  <div class="research-card-image"><span class="in-progress">In Progress</span><img src="images/current-research/autonomous.jpg" alt="Autonomous Driving &amp; Cooperative Perception" onerror="this.style.display='none'"></div>
                   <div class="research-card-body">
                     <div class="research-card-title">Autonomous Driving &amp; Cooperative Perception</div>
-                    <div class="research-card-desc">Exploring cooperative perception for autonomous driving using the V2X-Real dataset. Investigating vehicle-to-vehicle (V2V), vehicle-to-infrastructure (V2I), and infrastructure-to-infrastructure (I2I) communication strategies, training V2X-ViT baseline models on multi-agent 3D detection with LiDAR and camera fusion.</div>
+                    <div class="research-card-desc">Work on multi-agent 3D detection and cooperative perception for autonomous vehicles using LiDAR and camera data.</div>
                   </div>
                 </div>
                 <div class="research-card">
-                  <div class="research-card-image bg-pavement"><span class="in-progress">In Progress</span>PCI Automation</div>
+                  <div class="research-card-image"><span class="in-progress">In Progress</span><img src="images/current-research/pavement.jpg" alt="UGPTI Pavement Condition Automation" onerror="this.style.display='none'"></div>
                   <div class="research-card-body">
                     <div class="research-card-title">UGPTI Pavement Condition Automation</div>
-                    <div class="research-card-desc">Automating Pavement Condition Index (PCI) estimation using large language models. The system identifies pavement type and distress categories, measures severity levels, computes deduct values from standard curves, and calculates corrected deduct values to produce final PCI scores.</div>
+                    <div class="research-card-desc">Automating pavement condition assessment and PCI estimation using AI and language models.</div>
                   </div>
                 </div>
                 <div class="research-card">
-                  <div class="research-card-image bg-traffic"><span class="in-progress">In Progress</span>Traffic Prediction</div>
+                  <div class="research-card-image"><span class="in-progress">In Progress</span><img src="images/current-research/traffic.jpg" alt="Traffic Movie Prediction" onerror="this.style.display='none'"></div>
                   <div class="research-card-body">
                     <div class="research-card-title">Traffic Movie Prediction</div>
-                    <div class="research-card-desc">Developing RCSNet (Road-Conditioned Spatiotemporal Network) for multi-city traffic flow forecasting. The architecture features Static Road Encoder, Temporal Traffic Encoder, Road-Guided Cross-Attention Fusion, and Road-Weighted Loss to predict traffic patterns on high-resolution grids across cities.</div>
+                    <div class="research-card-desc">Spatiotemporal traffic flow forecasting on high-resolution grids for multiple cities.</div>
                   </div>
                 </div>
                 <div class="research-card">
-                  <div class="research-card-image bg-mcmot"><span class="in-progress">In Progress</span>MCMOT</div>
+                  <div class="research-card-image"><span class="in-progress">In Progress</span><img src="images/current-research/mcmot.jpg" alt="Multi-Class Multi-Object Tracking" onerror="this.style.display='none'"></div>
                   <div class="research-card-body">
                     <div class="research-card-title">Multi-Class Multi-Object Tracking (MCMOT)</div>
-                    <div class="research-card-desc">Finalizing a multi-class multi-object tracking framework to simultaneously detect and track diverse road users — vehicles, pedestrians, and cyclists — across complex traffic scenes. Advances robust association and re-identification methods for real-time transportation monitoring.</div>
+                    <div class="research-card-desc">Tracking vehicles, pedestrians, and cyclists in traffic with improved association and re-identification.</div>
                   </div>
                 </div>
                 <div class="research-card">
-                  <div class="research-card-image bg-shepherding"><span class="in-progress">In Progress</span>Robotic Shepherding</div>
+                  <div class="research-card-image"><span class="in-progress">In Progress</span><img src="images/current-research/shepherding.jpg" alt="Robotic Shepherding of Bisons" onerror="this.style.display='none'"></div>
                   <div class="research-card-body">
                     <div class="research-card-title">Robotic Shepherding of Bisons</div>
-                    <div class="research-card-desc">Developing autonomous robotic systems to safely monitor and guide bison herds using computer vision and adaptive AI algorithms that respect natural behaviors.</div>
+                    <div class="research-card-desc">Autonomous robots for monitoring and guiding bison herds using vision and adaptive control.</div>
                   </div>
                 </div>
               </div>
